@@ -4,9 +4,6 @@
     <ApplicationDefinition Include="App.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="MainPage.xaml" />
-  </ItemGroup>
-  <ItemGroup>
     <Midl Include="App.idl" />
     <Midl Include="MainPage.idl" />
   </ItemGroup>
@@ -49,6 +46,12 @@
     <Filter Include="Assets">
       <UniqueIdentifier>{e48dc53e-40b1-40cb-970a-f89935452892}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Views">
+      <UniqueIdentifier>{6ecd704b-a2cc-4f68-ab1a-d296ff386944}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Converters">
+      <UniqueIdentifier>{6a9d89f3-b498-4c95-9ffc-343eb1237a22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="PropertySheet.props" />
@@ -56,5 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainPage.xaml">
+      <Filter>Views</Filter>
+    </Page>
   </ItemGroup>
 </Project>
