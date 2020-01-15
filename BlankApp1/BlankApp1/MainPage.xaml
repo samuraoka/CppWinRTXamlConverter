@@ -8,6 +8,9 @@
     mc:Ignorable="d">
 
     <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
         <Style TargetType="Border">
             <Setter Property="Margin" Value="5"/>
             <Setter Property="BorderThickness" Value="1"/>
@@ -21,7 +24,11 @@
     
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Border>
-            <TextBlock Text="{x:Bind MyProperty}"/>
+            <TextBlock Text="{x:Bind MyProperty, Mode=OneWay}"/>
         </Border>
+        
+        <Button x:Name="IncrementButton"
+                Content="Increment"
+                Click="IncrementButton_Click"/>
     </StackPanel>
 </Page>
