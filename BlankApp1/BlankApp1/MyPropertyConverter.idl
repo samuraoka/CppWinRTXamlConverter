@@ -2,9 +2,9 @@ namespace BlankApp1
 {
     [bindable]
     [default_interface]
-    runtimeclass MyPropertyConverter 
+    runtimeclass MyPropertyConverter
+        : Windows.UI.Xaml.Data.IValueConverter
     {
         MyPropertyConverter();
-        Int32 MyProperty;
     }
 }

@@ -20,7 +20,7 @@ namespace winrt::BlankApp1::implementation
     void MainPage::MyProperty(int32_t value)
     {
         m_MyProperty = value;
-        OnPropertyChanged(*this, PropertyChangedEventArgs{ L"MyProperty" });
+        OnPropertyChanged(*this, Windows::UI::Xaml::Data::PropertyChangedEventArgs{ L"MyProperty" });
     }
 
     winrt::event_token MainPage::PropertyChanged(Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler)

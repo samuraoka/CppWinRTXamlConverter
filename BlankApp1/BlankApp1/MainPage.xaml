@@ -20,11 +20,14 @@
             <Setter Property="Margin" Value="5"/>
             <Setter Property="FontSize" Value="20"/>
         </Style>
+
+        <local:MyPropertyConverter x:Key="MyPropertyConverter"/>
     </Page.Resources>
     
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Border>
-            <TextBlock Text="{x:Bind MyProperty, Mode=OneWay}"/>
+            <TextBlock Text="{x:Bind MyProperty, Mode=OneWay,
+                Converter={StaticResource MyPropertyConverter}}"/>
         </Border>
         
         <Button x:Name="IncrementButton"

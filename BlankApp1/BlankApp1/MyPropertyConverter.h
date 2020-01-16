@@ -6,10 +6,10 @@ namespace winrt::BlankApp1::implementation
 {
     struct MyPropertyConverter : MyPropertyConverterT<MyPropertyConverter>
     {
-        MyPropertyConverter() = default;
+        MyPropertyConverter();
 
-        int32_t MyProperty();
-        void MyProperty(int32_t value);
+        Windows::Foundation::IInspectable Convert(Windows::Foundation::IInspectable const& value, Windows::UI::Xaml::Interop::TypeName const& targetType, Windows::Foundation::IInspectable const& parameter, hstring const& language);
+        Windows::Foundation::IInspectable ConvertBack(Windows::Foundation::IInspectable const& value, Windows::UI::Xaml::Interop::TypeName const& targetType, Windows::Foundation::IInspectable const& parameter, hstring const& language);
     };
 }
 

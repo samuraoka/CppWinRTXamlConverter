@@ -6,12 +6,25 @@
 
 namespace winrt::BlankApp1::implementation
 {
-    int32_t MyPropertyConverter::MyProperty()
+    MyPropertyConverter::MyPropertyConverter()
     {
-        throw hresult_not_implemented();
+        ::OutputDebugStringW(winrt::to_hstring(__FUNCTION__).c_str());
     }
 
-    void MyPropertyConverter::MyProperty(int32_t /*value*/)
+    Windows::Foundation::IInspectable MyPropertyConverter::Convert(
+        Windows::Foundation::IInspectable const& value,
+        Windows::UI::Xaml::Interop::TypeName const& /*targetType*/,
+        Windows::Foundation::IInspectable const& /*parameter*/,
+        hstring const& /*language*/)
+    {
+        return value;
+    }
+
+    Windows::Foundation::IInspectable MyPropertyConverter::ConvertBack(
+        Windows::Foundation::IInspectable const& /*value*/,
+        Windows::UI::Xaml::Interop::TypeName const& /*targetType*/,
+        Windows::Foundation::IInspectable const& /*parameter*/,
+        hstring const& /*language*/)
     {
         throw hresult_not_implemented();
     }
