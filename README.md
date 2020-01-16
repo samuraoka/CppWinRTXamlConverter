@@ -9,7 +9,7 @@ template <typename D, typename K, typename V> WINRT_IMPL_AUTO(V) consume_Windows
     return winrt_impl_result;
 }
 ```
-* If typename **V** was **Windows::Foundation::IInspectable**, **m_ptr** that is member variable of **winrt_impl_result** don't be initialized.
-* Then in the **put_abi** function, nullptr is assigned to **winrt_impl_result**.
-* It invokes **IUnknown& operator=(std::nullptr_t)** function, and then **release_ref** function is called.
-* Finally in **unconditional_release_ref** function, **Release** function is called by using invalid **m_ptr** address.
+1. If typename **V** was **Windows::Foundation::IInspectable**, **m_ptr** that is member variable of **winrt_impl_result** don't be initialized.
+1. Then in the **put_abi** function, nullptr is assigned to **winrt_impl_result**.
+1. It invokes **IUnknown& operator=(std::nullptr_t)** function, and then **release_ref** function is called.
+1. Finally in **unconditional_release_ref** function, **Release** function is called by using invalid **m_ptr** address.
